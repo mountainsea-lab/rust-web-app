@@ -57,7 +57,7 @@ pub enum Error {
 	// When the `rpc_router::Error` is not a `Handler`, we can pass through the rpc_router::Error
 	// as all variants contain concrete types.
 	RpcRouter {
-		id: Value,
+		id: Box<Value>,
 		method: String,
 		error: rpc_router::Error,
 	},
@@ -97,7 +97,7 @@ impl From<rpc_router::CallError> for Error {
 				}
 			}
 			error => Error::RpcRouter {
-				id: id.to_value(),
+				id: Box::new(id.to_value()),
 				method,
 				error,
 			},
