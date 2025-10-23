@@ -1,6 +1,6 @@
 use crate::ctx::Ctx;
-use crate::model::user::{User, UserBmc};
 use crate::model::ModelManager;
+use crate::model::user::{User, UserBmc};
 use sqlx::postgres::PgPoolOptions;
 use sqlx::{Pool, Postgres};
 use std::fs;

@@ -2,7 +2,7 @@ use crate::model::store::dbx;
 use derive_more::From;
 use lib_auth::pwd;
 use serde::Serialize;
-use serde_with::{serde_as, DisplayFromStr};
+use serde_with::{DisplayFromStr, serde_as};
 use sqlx::error::DatabaseError;
 use std::borrow::Cow;
 
